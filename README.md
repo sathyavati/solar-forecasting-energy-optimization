@@ -20,3 +20,24 @@ End-to-end analysis of two utility-scale solar plants in India:
 ## Forecast quality
  
 1-hour-ahead model predictions vs actual generation on unseen test days. The persistence baseline is structurally "one hour late" on every ramp; the Random Forest anticipates them:
+![Forecast vs actual](images/forecast_vs_actual.png)
+ 
+| Model | MAE (kW) | R² | MAE daytime | R² daytime |
+|---|---|---|---|---|
+| Persistence (naive) | 2,287 | 0.767 | 4,416 | 0.454 |
+| Yesterday same time | 1,861 | 0.786 | 3,714 | 0.492 |
+| Linear Regression | 2,164 | 0.832 | 3,392 | 0.628 |
+| LSTM | 1,810 | 0.836 | - | - |
+| **Random Forest** | **1,370** | **0.883** | **2,731** | **0.722** |
+ 
+Daytime-only metrics are reported because nighttime zeros (~half the data) inflate overall scores.
+## Exploratory analysis
+ 
+![EDA overview](images/eda_overview.png)
+ 
+## Battery simulation
+ 
+The battery completes one full cycle per day, filling on midday surplus (the flat top at 20 MWh is curtailed energy), covering the early-evening deficit, empty by night:
+ 
+![Battery state of charge](images/battery_soc.png)
+ 
