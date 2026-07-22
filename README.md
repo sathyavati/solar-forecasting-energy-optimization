@@ -53,8 +53,7 @@ The battery completes one full cycle per day, filling on midday surplus (the fla
 │   ├── 02_load_data.sql            # LOAD DATA with date-format handling
 │   ├── 03_data_cleaning.sql        # plant-level cleaned tables (AVG×22 correction)
 │   └── 04_analysis_queries.sql     # joins, RANK()/LAG() window functions, fault detection
-├── images/                         # exported charts 
-└── data/                           
+├── images/                         # exported charts                           
 ```
 
 ## What makes this more than a model-fitting exercise
