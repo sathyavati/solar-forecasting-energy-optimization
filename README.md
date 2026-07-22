@@ -4,7 +4,7 @@ End-to-end analysis of two utility-scale solar plants in India:
 
 **MySQL** data pipeline → data-quality audit → EDA → **1-hour-ahead generation forecasting** (benchmarked against naive baselines) → forecast-driven **battery storage simulation**.
 
-##Data
+## Data
 
 [Kaggle - Solar Power Generation Data](https://www.kaggle.com/datasets/anikannal/solar-power-generation-data)
 
