@@ -1,8 +1,21 @@
 # Solar Power Forecasting & Smart Energy Optimization
 
 End-to-end analysis of two utility-scale solar plants in India: 
-
 **MySQL** data pipeline → data-quality audit → EDA → **1-hour-ahead generation forecasting** (benchmarked against naive baselines) → forecast-driven **battery storage simulation**.
+
+## The problem
+
+Solar power is valuable but unreliable in two ways. It is **unpredictable**: cloud
+cover can cut output 40% within an hour, and daily energy in this dataset swings
+by up to 47 MWh day to day. It is also **mistimed**: production peaks at noon and
+drops to zero at night, while consumers need power around the clock. On top of
+that, plant performance degrades **silently**. An underperforming inverter among
+22 is invisible without systematic auditing.
+
+This project addresses all three. A forecasting model predicts plant output 1 hour
+ahead, 40% more accurately than naive methods. A battery-dispatch simulation shifts
+midday surplus to the evening deficit, reducing grid dependence by 19%. And a SQL
+data-quality audit surfaced two faulty inverters costing roughly 10% of their capacity.
 
 ## Data
 
