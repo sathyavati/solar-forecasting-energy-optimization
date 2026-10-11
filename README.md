@@ -1,7 +1,7 @@
 # Solar Power Forecasting & Smart Energy Optimization
 
 End-to-end analysis of two utility-scale solar plants in India: 
-**MySQL** data pipeline → data-quality audit → EDA → **1-hour-ahead generation forecasting** (benchmarked against naive baselines) → forecast-driven **battery storage simulation**.
+**MySQL** data pipeline → data-quality audit → EDA → **1-hour-ahead generation forecasting** (benchmarked against naive baselines) → **battery storage what-if simulation**.
 
 ## The problem
 
