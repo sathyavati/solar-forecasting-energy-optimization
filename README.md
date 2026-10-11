@@ -76,7 +76,7 @@ The battery completes one full cycle per day, filling on midday surplus (the fla
    - ~28%of Plant 2 timestamps had inverters missing, so plant totals use `AVG(power) × 22` instead of `SUM` to avoid understating output.
 2. **Honest forecasting.** Predicts t+1h using only information available at time t (lags of power/irradiation, time of day (no future weather)). The train/test split is time-based, never shuffled, and every model must beat two naive baselines.
 3. **Deep learning tested, not assumed.** The LSTM (proper consecutive 6-hour sequences with gap checks) beats the baselines but not the feature-engineered Random Forest which is the expected outcome at this data scale, and a deliberate finding about matching model complexity to data volume.
-4. **Business framing.** Forecasts feed a unit-consistent battery dispatch simulation (kW × 0.25 h = kWh) with quantified grid savings and a sizing recommendation based on the 313 MWh/week of curtailed surplus.
+4. **Business framing.** A unit-consistent battery dispatch simulation (kW × 0.25 h = kWh) quantifies grid savings and a sizing recommendation based on the 313 MWh/week of curtailed surplus.
 
  
 ## Limitations
