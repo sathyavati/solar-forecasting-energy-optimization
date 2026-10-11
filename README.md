@@ -26,7 +26,7 @@ data-quality audit surfaced two inverters running up to 9% below their peers.
 |---|---|
 | 1-hour-ahead forecast (Random Forest + lag features) | MAE 1,370 kW, R² 0.88 i.e **40% lower error than persistence baseline** |
 | LSTM comparison (same split, same metrics) | MAE 1,795 kW, R² 0.85 which beats all baselines but loses to RF on only 34 days of data |
-| Faulty equipment found via SQL audit | 2 inverters up to 9% below peerswith 42 zero-output-in-full-sun events; separate 9-day, 4-inverter outage at Plant 2 |
+| Faulty equipment found via SQL audit | 2 inverters up to 9% below peers, with 42 zero-output-in-full-sun events; separate 9-day, 4-inverter outage at Plant 2 |
 | Battery simulation (20 MWh, 8 MW load, test week) | **19% reduction in grid energy** (~₹6 lakh/week at ₹4/kWh); 313 MWh curtailed indicating the battery is undersized |
 | Plant comparison | Plant 2 produced ~21% less energy than Plant 1 under near-identical weather |
 | Physics check | Module temperature vs output-per-unit-irradiation: r = −0.52 (heat reduces panel efficiency) |
