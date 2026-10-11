@@ -14,7 +14,7 @@ that, plant performance degrades **silently**. An underperforming inverter among
 This project addresses all three. A forecasting model predicts plant output 1 hour
 ahead, 40% more accurately than naive methods. A battery-dispatch simulation shifts
 midday surplus to the evening deficit, reducing grid dependence by 19%. And a SQL
-data-quality audit surfaced two faulty inverters costing roughly 10% of their capacity.
+data-quality audit surfaced two inverters running up to 9% below their peers.
 
 ## Data
 
